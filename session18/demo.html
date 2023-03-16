@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<style>
+  
+    
+</style>
+<body>
+    <div class="container">
+        <h2>Quản lý sinh viên</h2>
+        <label for="">ID</label> <br>
+    
+        <input id="id" type="number"  placeholder="Nhập Id"><br>
+    
+        <label for="">Name</label> <br>
+    
+        <input id="name" type="text"   placeholder="nhập tên"><br>
+        
+        <label for="">MSV</label> <br>
+        
+        <input  id="msv" type="number"  placeholder="nhập Msv"><br>
+        
+        <label for="">Gender</label>
+        
+        <select id="Gender">
+            <option value="south"></option>
+            <option value="female">Female</option>
+        </select> <br>
+        
+        <label for="">Hometown</label> <br>
+        <input id="HomeTown" type="text"  placeholder="nhập quê quán"><br>
+        
+        <button onclick="saveInfo()"><i class="fa-solid fa-floppy-disk"></i>    </button>
+
+            <table  id="table">
+            <!--        <tr>
+                       <td>ID</td>
+                       <td>Name</td>
+                       <td>Age</td>
+                       <td>Gender</td>
+                       <td>HomeTown</td>
+                   </tr> -->
+               </table>
+       
+            
+    </div>
+    
+        
+   
+   
+<script src="./style.js"></script>
+</body>
+</html>

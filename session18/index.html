@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        _-_-_-_-_-_-_-_-_-_-_-_-[Object : Là Đối Tượng ]-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+            1 thuộc tính : property :
+            2 hành ĐỘng : method (phương thức.)
+                VD : Đối tượng con mèo ;
+                có các đặc điểm ; 
+                màu lông : màu Mun
+                mắt : xanh
+                Giới tính : Đực Cái 
+                Có các Hành Động
+                kêu:
+                nhảy
+            ------------ CÁCH KHAI BÁO ĐỐI TƯỢNG ---------------
+                let myCat={
+                    maulong:"Trắng",
+                    maumat :"Xanh",
+                    gioitinh:"Cái",
+                    keu:function keu(){
+                        console.log("Gau Gau")
+                    }
+                    return "meo meo"
+                }
+
+        *CRUD*
+        C : create
+        myCat.mauMat="Đen";        => CÁCH 1 <=
+        myCat["Chungloai"]="Mun"   => CÁCH 2 <=
+        
+        R :read : ĐỌC
+        for(const Key in myCat){
+            console.log(key);
+        }
+
+        U : Update 
+        myCat.maulong="Màu Pink"     => CÁCH 1 <=
+        myCat["Màu Lông"]="Màu Đen"  => CÁCH 2 <=
+        console.log(myCat)
+
+        D : Delete
+        delete myCat.gioiTinh;
+        console.log(myCat);
+    
+        console.log(myCat.keu());
+
+
+
+        ------Ktra thuộc tính có tồn tại trong đối tượng hay không-------
+            myCat.hasOwProperty("age")
+
+
+        ======== THAM CHIẾU =========
+        let Obj1={
+            name:"hoa "
+        }
+        let obj2 = obj1    => bản chất đang gán địa chỉ của obj1 cho obj2;
+        obj1.name="hồng"      Khi obj .name = "hồng"thì cái địa chỉ đáy đã thay đổi giá trị;
+        console.log(obj2);
+
+        -----------------*[CÁC CÁCH OBJECT]*-------------------
+        ====================[deep Clone (sâu)]============================
+        
+        [*] cách 1 : chuyển về dạng JSON
+        let Obj1={
+            name:"hoa ",
+            myhobbies:{
+                xemPhim"Nhà bà Nữ"
+            }
+
+        }
+        let obj2 = JSON.parse(JSON.Stringjfy(obj1)) 
+        obj1.name="hồng"
+        obj1.myhobbies.xemPhim="Nhà Bà Nam"
+        console.log(obj2)
+        
+       
+        =====================[shallow clone (nông)]=====================  
+        
+
+        [*] cách 1 : dùng toán tử spread
+        let Obj1={
+            name:"hoa "
+        }
+        let obj2 = {...obj1}    =>spread
+        obj1.name="hồng"
+
+        [*] cách 2 : dùng Object.assign();
+        
+        let Obj1={
+            name:"hoa ",
+            myhobbies:{
+                xemPhim"Nhà bà Nữ"
+            }
+
+        }
+        let obj2 =Object.assign({},obj1); 
+        obj1.name="hồng"
+        obj1.myhobbies.xemPhim="Nhà Bà Nam"
+        console.log(obj2)
+    
+
+
+        =====> khởi tạo đối tượng <=====
+        ==>**<== đối tượng . Phương thức thì this đại diện cho đối tượng ==>**<==
+
+
+
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        let person1 = new Person("Huyền",18)
+        let person1 = new Person("Hương",19)
+        console.log(person1);
+        console.log(person2);
+
+        let student={
+            name:"Ánh Linh"
+            age:24,
+            say:function sayHello(){
+                return this.name;
+            }
+            goodbye:function goodbye(){
+                return this.name
+            }
+        } 
+        console.log(student.say())
+        */
+
+
+
+    </script>
+</body>
+</html>
